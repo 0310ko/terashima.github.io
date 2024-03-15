@@ -125,18 +125,23 @@ body {
     padding-left: 1em;
   }
   
-  .bar{
-      z-index: 100;
-      background-color: #eda93b;
-  }
-
+/*footer*/
 .footer {
     background-color: #eda93b;
     color: #ffffff;
     padding: 3rem 1rem;
     position: relative;
   }
-  
+.chisame{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.chisame a{
+    color:#ffffff;
+}
+.chisame a:hover{
+    color:#c17316;
+}
   .footer-inner {
     max-width: 1300px;
     margin: auto;
@@ -145,13 +150,17 @@ body {
   .footer-body {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
   .footer-logo-container {
     max-width: 320px;
     width: 330px;
     height: 100px;
+    text-align: center;
     color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
   }
   .footer-logo{
     width: 340px;
@@ -168,11 +177,12 @@ body {
   hr {
     display: none;
   }
-  
+ 
   .nav-list {
     width: 380%;
     list-style: none;
     margin: 25px;
+    border-left: #ffffff solid 3px;
   }
   
   .nav-list li a {
