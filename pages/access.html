@@ -49,12 +49,67 @@
         <img  class="herophoto" src="../image/hero.png">
         <p>アクセス</p>
     </div>
-    
+    <div>
+        <p class="underline map">マップ</p>
+    </div>
+    <div class="umekomi">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6475.632403469119!2d139.63457894069484!3d35.755322072677714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ec45ae5fbbbf%3A0x8968f90717d98bf0!2z44Gm44KJ44GX44G-5pW06aqo6Zmi!5e0!3m2!1sja!2sjp!4v1710612311200!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="ac_setumei">
+        <p class="paragraph">
+            〒179-0074 東京都練馬区春日町6丁目8-46
+        </p>
+        <p class="paragraph">
+            練馬春日町駅から徒歩約7分
+        </p>
+    </div>
+    <div>
+        <p class="underline map">アクセス方法</p>
+    </div>
+    <div clas="ac_photo_container">
+        <div class="ac_photo">
+            <img src="../image/sample.JPG">
+        </div>
+        <div class="yajirushi">
+           <p class="paragraph">
+            →
+           </p>
+        </div>
+    </div>
     <style>
         body{
             background-color: #ffffff;
             margin: 0;
         }
-       
+       .map{
+        margin: 0 auto;
+        font-weight: bold;
+       }
+       .umekomi{
+        margin: 0 auto;
+        padding: 1rem 0 1rem;
+        width: 50%;
+       }
+       .umekomi iframe{
+        width: 100%;
+       }
+       .ac_setumei{
+        text-align: center;
+       }
+       .ac_photo_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+       }
+       .ac_photo{
+        width: 20%;
+       }
+       .ac_photo img{
+        width: 100%;
+       }
+       .yajirushi{
+        width: 10%;
+       }
     </style>
 </body>

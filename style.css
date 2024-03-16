@@ -11,7 +11,12 @@ body {
   position: relative;
   letter-spacing: 0.1em;
 }
-
+/*アンダーライン*/
+.underline{
+    border-bottom: 3px #eda93b solid;
+    padding: 0 3px 10px 3px;
+    width: fit-content
+} 
 /*header*/
 /* ハンバーガーボタンを押してチェックがONの時だけ
    スマホ用メニューを画面左端に移動する */
@@ -37,7 +42,7 @@ body {
 
   header {
     display: flex;
-    background: #eda93b;
+    background-color: #eda93b;
     height: 60px;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: bold;
@@ -47,7 +52,7 @@ body {
   .main-menu {
     margin: 0 auto;
     display: flex;
-    width: 2000px;
+    width: 1220px;
   }
   .logo {
     text-align: center;
@@ -116,26 +121,11 @@ body {
     text-decoration: none;
     padding: 9px 15px 10px 0;
   }
-
-
-  .tera{
-    font: "Zen Kaku Gothic New", sans-serif;
-    font-weight: bold;
-    color: #ffffff;
-    padding-left: 1em;
-  }
-  
-
  
   .text {
     display: flex;
     justify-content: center;
   }
-  .etunenlogo {
-    width: 36%;
-    object-fit: cover;
-  }
-  
 
 .paragraph{
     width:100%;
@@ -144,7 +134,7 @@ body {
     font-size: 14px;
     padding-bottom: 8px;
     font-weight: 400;
-    color:#08263a;
+    color:#190F0C;
 }
 
 /*hero*/
@@ -189,14 +179,19 @@ body {
     display: flex;
     flex-direction: column;
     padding-left: 3rem;
+    text-align: center;
     
 }
 .name{
     border-right: #ffffff solid 3px;
     height: 20%;
     padding-right: 3rem;
+    text-align: center;
 }
-
+.tera{
+    font: bold 24px "Zen Kaku Gothic New", sans-serif;
+    color: #ffffff;
+  }
 /*footerアコーディオン*/
 /*ベース*/
 .toggle {
@@ -215,8 +210,11 @@ body {
 	-webkit-transform: rotate(45deg);
 	position: absolute;
 	top:calc( 50% - 3px );
-	right: 20px;
+	right: 35px;
 	transform: rotate(135deg);
+}
+.accordion{
+    width: 30%;
 }
 .Label,
 .content {
@@ -227,8 +225,6 @@ body {
 }
 .content {		/*本文*/
 	height: 0;
-	margin-bottom:10px;
-	padding:0 20px;
 	overflow: hidden;
 }
 .toggle:checked + .Label + .content {	/*開閉時*/

@@ -62,7 +62,7 @@
    </div>
    <!--挨拶-->
    <div class="aisatu">
-    <p>突然の怪我や痛みはもちろんの事、
+    <p class="paragraph">突然の怪我や痛みはもちろんの事、
         <br />「もう治らないかな......」
         <br />と思っていたり、
         <br />「上手に付き合っていくしかないです」
@@ -76,31 +76,25 @@
     <div class="icon_container">
         <a href="./pages/access.html">
         <img src="./image/map.png">
-        <p>アクセス</p>
+        <p class="paragraph">アクセス</p>
        </a>
     </div>
     <div class="icon_container">
         <a href="./pages/hospital.html">
         <img src="./image/hospital.png">
-        <p>院内紹介</p>
+        <p class="paragraph">院内紹介</p>
         </a>
-    </div>
-    <div class="icon_container">
-        <a href="./pages/virus.html">
-        <img src="./image/mask.png">
-        <p>コロナウィルス対策<br />について</p>
-    </a>
     </div>
     <div class="icon_container">
         <a href="./pages/accident.html">
         <img src="./image/tue.png">
-        <p>交通事故治療<br />について</p>
+        <p class="paragraph">交通事故治療<br />について</p>
     </a>
     </div>
     <div class="icon_container">
         <a href="./pages/heal.html">
         <img src="./image/ear.png">
-        <p>その他治療<br />について</p>
+        <p class="paragraph">その他治療<br />について</p>
     </a>
     </div>
    </div>
@@ -121,7 +115,7 @@
  <!--応援します！-->
  <div class="shinia">
     <p class="underline ouen">てらしま整骨院は70歳、80歳の方々を応援します！</p>
-    <p class="ouentext">
+    <p class="paragraph ouentext">
         仕事に従事して頑張ってきて、
         <br />「これからは自分の好きなことを始めよう」
         <br />そう思っていた矢先に体の自由が......
@@ -137,7 +131,7 @@
  </div>
  <div class="footer">
     <div class="name">
-        <p>
+        <p class="tera pargraph">
             てらしま整骨院
         </p>
         <p>
@@ -145,35 +139,14 @@
         </p>
     </div>
     <div class="f_content">
-            <p><a href="Index.html">HOME</a></p>
-            <p><a href="./pages/access.html">アクセス</a></p>
-            <p><a href="./pages/hospital.html">院内案内</a></p>
-            <p><a href="./pages/virus.html">コロナウィルス対策について</a></p>
-            <p><a href="./pages/accident.html">交通事故治療について</a></p>
-            <p><a href="./pages/heal.html">その他治療について</a></p>
+            <p class="paragraph"><a href="Index.html">HOME</a></p>
+            <p class="paragraph"><a href="./pages/access.html">アクセス</a></p>
+            <p class="paragraph"><a href="./pages/hospital.html">院内案内</a></p>
     </div>
     <div class="f_content">
-        <section class="accordion">
-            <input id="block-01" type="checkbox" class="toggle">
-            <label class="Label" for="block-01">不思議の国のアリス</label>
-            <div class="content">
-                <p>【不思議の国のアリスの内容が表示します。】<br>
-                アリスは川辺でおねえさんのよこにすわって、なんにもすることがないのでとても退屈（たいくつ）しはじめていました。一、二回はおねえさんの読んでいる本をのぞいてみたけれど、そこには絵も会話もないのです。「絵や会話のない本なんて、なんの役にもたたないじゃないの」とアリスは思いました。</p>
-            </div>
-            <input id="block-02" type="checkbox" class="toggle">
-            <label class="Label" for="block-02">坊ちゃん</label>
-            <div class="content">
-                <p>【坊ちゃんの内容が表示します。】<br>
-                親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
-            </div>
-            <input id="block-03" type="checkbox" class="toggle">
-            <label class="Label" for="block-03">徒然草</label>
-            <div class="content">
-                <p>【徒然草の内容が表示します。】<br>
-                つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）</p>
-            </div>
-        </section>
-</div>
+        <p class="paragraph"><a href="./pages/heal.html">治療について</a></p> 
+        <p class="paragraph"><a href="./pages/accident.html">交通事故治療について</a></p>
+    </div>
 </div>
  <style>
     /*おすすめ*/
@@ -213,11 +186,11 @@
     /*アイコンボタン*/
     .iconbtn{
         width: 100%;
-        margin: 1em;
+        margin: 3em;
     }
     .icon_container{
         text-align: center;
-        width: 13%;
+        width: 10%;
     }
     .icon_container p{
         font-weight: bold;
@@ -285,16 +258,14 @@
 .shinia{
     padding: 3rem 0 3rem 0;
 }
-.underline{
-    border-bottom: 3px #eda93b solid;
-    padding: 0 3px 10px 3px;
-    width: fit-content
-} 
+
 .ouen{
     font-weight: bold;
+    font-size: 14px;
     margin: 0 auto;
 }
 .ouentext{
+    font-size: 14px;
     text-align: center;
 }
 .ouentext a{
@@ -306,6 +277,20 @@
     color:#eda93b;
    text-decoration: none;
 }
+/**/
+@media screen and (max-width: 1024px) {
+    .osu_img_container{
+        width: 70px;
+        height: 70px;
+    }
+    .osu_circle{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 10px;
+    }
+    
+  }
  </style>
  </body>
 
