@@ -125,89 +125,7 @@ body {
     padding-left: 1em;
   }
   
-/*footer*/
-.footer {
-    background-color: #eda93b;
-    color: #ffffff;
-    padding: 3rem 1rem;
-    position: relative;
-  }
-.chisame{
-    font-weight: 400;
-    font-size: 1rem;
-}
-.chisame a{
-    color:#ffffff;
-}
-.chisame a:hover{
-    color:#c17316;
-}
-  .footer-inner {
-    max-width: 1300px;
-    margin: auto;
-  }
-  
-  .footer-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-logo-container {
-    max-width: 320px;
-    width: 330px;
-    height: 100px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 2rem;
-  }
-  .footer-logo{
-    width: 340px;
-    height: 350px;
-  }
-  
-  .footer-navi-list {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0.3rem;
-  }
-  
-  hr {
-    display: none;
-  }
- 
-  .nav-list {
-    width: 380%;
-    list-style: none;
-    margin: 25px;
-    border-left: #ffffff solid 3px;
-  }
-  
-  .nav-list li a {
-    display: flex;
-    color: #ffffff;
-    padding: 3px;
-    text-decoration: none;
-    list-style: none;
-    font-weight: 400;
-    width:100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-list li{
-    text-align: center;
-    margin:20px;
-  }
-  
 
-  .nav-list li a:hover {
-    color: #c17316;
-  }
-  
-  
  
   .text {
     display: flex;
@@ -251,3 +169,73 @@ body {
   color: #C17316;
 }
 
+/*footer*/
+
+.footer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #eda93b;
+    color:#ffffff;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+}
+.footer a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.f_content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    
+}
+.name{
+    border-right: #ffffff solid 3px;
+    height: 20%;
+    padding-right: 3rem;
+}
+
+/*footerアコーディオン*/
+/*ベース*/
+.toggle {
+	display: none;
+}
+.Label {		/*タイトル*/
+	display: block;
+	color: #fff;
+}
+.Label::before{		/*タイトル横の矢印*/
+	content:"";
+	width: 6px;
+	height: 6px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	top:calc( 50% - 3px );
+	right: 20px;
+	transform: rotate(135deg);
+}
+.Label,
+.content {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: all 0.3s;
+}
+.content {		/*本文*/
+	height: 0;
+	margin-bottom:10px;
+	padding:0 20px;
+	overflow: hidden;
+}
+.toggle:checked + .Label + .content {	/*開閉時*/
+	height: auto;
+	padding:20px ;
+	transition: all .3s;
+}
+.toggle:checked + .Label::before {
+	transform: rotate(-45deg) !important;
+}
