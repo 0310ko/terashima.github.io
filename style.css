@@ -6,15 +6,15 @@ body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   background-color:#F7F1ED;
   margin: 0;
+  padding-top: 60px;
   width:100%;
-  padding-top:60px;
   position: relative;
   letter-spacing: 0.5px;
 }
 .paragraph{
     width:100%;
     letter-spacing: 0.5px;
-    line-height: 14px;
+    line-height: 18px;
     font-size: 14px;
     padding-bottom: 8px;
     font-weight: 400;
@@ -42,117 +42,143 @@ ul{
     color: #190F0C;
   }
 /*header*/
-/* ハンバーガーボタンを押してチェックがONの時だけ
-   スマホ用メニューを画面左端に移動する */
-   #sp-menu__check:checked ~ .sp-menu__content {
-    left: 0;
-  }
-  /* 変更箇所はコメントの項目のみ */
-  .sp-menu__content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-  
-    /* 普段は画面外にするために左端を画面右端の位置にする */
-    left: 100%;
-  
-    z-index: 90;
-    background-color: #eda93b;
-    
-    /* 右端からゆっくり移動するように表示 */
-    transition: all 0.5s;
-  }
+header{
+  width:100%;
+  height:60px;
+  background-color: #eda93b;
+  position: fixed;
+  top:0;
+}
 
-  header {
-    display: flex;
-    background-color: #eda93b;
-    height: 60px;
-    font-family: "Zen Kaku Gothic New", sans-serif;
+.logo{
+    color: #ffffff;
     font-weight: bold;
-    top:0;
-    position: fixed;
-  }
-  .main-menu {
-    margin: 0 auto;
-    display: flex;
-    width: 1220px;
-  }
-  .logo {
-    text-align: center;
-    padding: 0 10px 0 0;
-    font-size: 20px;
-    width: 200px;
-    color: #ffffff;
-  }
- 
-  .sp-menu__box {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    height: 60px;
-    width: 60px;
-    justify-content: center;
-    align-items: center;
+}
+
+.bar{
     z-index: 100;
-    background: #eda93b;
-  }
-  .sp-menu__box span,
-  .sp-menu__box span:before,
-  .sp-menu__box span:after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: #ffffff;
-    position: absolute;
-  }
-  .sp-menu__box span:before {
-    bottom: 8px;
-  }
-  .sp-menu__box span:after {
+    background-color: #eda93b;
+}
+
+/*menu*/
+.menu{
+    height: 20px;/*menubar size*/
+    width: 30px;/*menubar size*/
+    position: fixed;/*menubar position*/
+    right: 20px;/*menubar position*/
+    top: 20px;/*menubar position*/
+    z-index: 99;/*menubar 一番手前側に配置*/
+    cursor: pointer;/*カーソルを指の形に変更*/
+}
+.menu__line{
+    background: #ffffff;/*bar color*/
+    display: block;/*https://saruwakakun.com/html-css/basic/display*/
+    height: 2px;/*bar thickness*/
+    position: absolute;/*絶対位置*/
+    width: 100%;/*棒の長さ*/
+    transition-duration: .1s;
+}
+.menu__line--center{
+    top: 9px;/*棒の位置*/
+        transition-duration: .1s;
+}
+.menu__line--bottom{
+    bottom: 0;/*下の棒の位置*/
+        transition-duration: .1s;
+}
+.menu__line--top.active{
     top: 8px;
-  }
-  #sp-menu__check {
-    display: none;
-  }
-  #sp-menu__check:checked ~ .sp-menu__box span {
-    background: rgba(255, 255, 255, 0);
-  }
-  #sp-menu__check:checked ~ .sp-menu__box span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  }
-  #sp-menu__check:checked ~ .sp-menu__box span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-  .sp-menu__list {
-    padding: 70px 10px 0;
-  }
-  .sp-menu__item {
-    border-bottom: solid 3px #ffffff;
-    list-style: none;
-  }
-  .sp-menu__link {
-    display: block;
+    transform: rotate(45deg);/*上の棒の挙動*/
+    background-color: #ffffff;
+}
+.menu__line--center.active{
+    transform:scaleX(0);/*真ん中の棒の挙動*/
+}
+.menu__line--bottom.active{
+    bottom: 10px;
+    transform: rotate(135deg);/*下の棒の挙動*/
+    background-color: #ffffff;
+}
+.bar.active{
+    background-color: #eda93b;
+}
+/*gnav*/
+/*箱*/
+
+.gnav{
+    background: #eda93b;
+    margin-top: 60px;
+    height:100%;
+    display:none;
     width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 9px 15px 10px 0;
-  }
- 
-  .text {
+    z-index: 98;
+    position: fixed;
+}
+.gnav__wrap{
+    align-items:center;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    height: 100%;
+    width: 100%;
+    line-height: 0.5;
+}
+
+.gnav__menu{
+    width:100%;
+    position: absolute;
+    left:50%;
+    top:2px;
+    height:90%;
+    margin-bottom:30;
+    overflow:auto;
+    transform:translateX(-50%);
+    list-style: none;
+    padding: 0;
+}
+
+.gnav__menu::-webkit-scrollbar{
+  width: 10px;
+ }
+ .gnav__menu::-webkit-scrollbar-track{
+  background-color: #ffffff;
+ }
+ .gnav__menu::-webkit-scrollbar-thumb{
+  background-color: #ffffff;
+ }
+
+.gnav__menu__item{
+    text-align: center;
+    margin-bottom: 70px;
+    
+}
+.gnav__menu__item a{
+      color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+      text-decoration: none;
+    transition:.5s;/*黒く変わるまで*/
+}
+.gnav__menu__item a:hover{
+    color: #fff
+}
+
+
+@media print, screen and (max-width:1200px){
+  header{
+    width:100%;
+    height:60px;
+    background-color: #eda93b;
+    position: fixed;
+    top:0;
+    }
+    .logo{
+      padding-top: 5px;
   }
-
-
-
+  .bar{
+      z-index: 100;
+  }
+  
+}
 /*hero*/
 .hero{
   position: relative;
@@ -185,7 +211,6 @@ ul{
     background-color: #eda93b;
     color:#ffffff;
     width: 100%;
-    padding: 0 2rem 0 2rem;
 }
 .footer a{
     color:#ffffff;
@@ -208,46 +233,3 @@ ul{
     font: bold 24px "Zen Kaku Gothic New", sans-serif;
     color: #ffffff;
   }
-/*footerアコーディオン*/
-/*ベース*/
-.toggle {
-	display: none;
-}
-.Label {		/*タイトル*/
-	display: block;
-	color: #fff;
-}
-.Label::before{		/*タイトル横の矢印*/
-	content:"";
-	width: 6px;
-	height: 6px;
-	border-top: 2px solid #fff;
-	border-right: 2px solid #fff;
-	-webkit-transform: rotate(45deg);
-	position: absolute;
-	top:calc( 50% - 3px );
-	right: 35px;
-	transform: rotate(135deg);
-}
-.accordion{
-    width: 30%;
-}
-.Label,
-.content {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	transform: translateZ(0);
-	transition: all 0.3s;
-}
-.content {		/*本文*/
-	height: 0;
-	overflow: hidden;
-}
-.toggle:checked + .Label + .content {	/*開閉時*/
-	height: auto;
-	padding:20px ;
-	transition: all .3s;
-}
-.toggle:checked + .Label::before {
-	transform: rotate(-45deg) !important;
-}
