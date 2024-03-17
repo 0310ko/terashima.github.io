@@ -13,6 +13,8 @@ body {
 }
 /*アンダーライン*/
 .underline{
+    margin: 0 auto;
+    font-weight: bold;
     border-bottom: 3px #eda93b solid;
     padding: 0 3px 10px 3px;
     width: fit-content
