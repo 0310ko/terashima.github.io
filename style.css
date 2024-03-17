@@ -9,7 +9,16 @@ body {
   width:100%;
   padding-top:60px;
   position: relative;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.5px;
+}
+.paragraph{
+    width:100%;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    font-size: 14px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    color:#190F0C;
 }
 /*アンダーライン*/
 .underline{
@@ -19,6 +28,19 @@ body {
     padding: 0 3px 10px 3px;
     width: fit-content
 } 
+/*リスト*/
+ul{
+    width: fit-content;
+    margin: auto;
+    color:#190F0C;
+    font-size: 14px;
+  }
+  li{
+    color: #C17316;
+  }
+  span{
+    color: #190F0C;
+  }
 /*header*/
 /* ハンバーガーボタンを押してチェックがONの時だけ
    スマホ用メニューを画面左端に移動する */
@@ -129,15 +151,7 @@ body {
     justify-content: center;
   }
 
-.paragraph{
-    width:100%;
-    letter-spacing: 0.5px;
-    line-height: 14px;
-    font-size: 14px;
-    padding-bottom: 8px;
-    font-weight: 400;
-    color:#190F0C;
-}
+
 
 /*hero*/
 .hero{
