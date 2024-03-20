@@ -10,7 +10,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script type="text/javascript" src="../index.js"></script>
 </head>
-
+<!--pc/sp共にまる
+    りんたろうへ
+    ・道順のところの写真と文字を差し替えてください
+-->
 <body>
      <header class="bar">
           <div class="menu">
@@ -55,7 +58,7 @@
         <p class="underline">アクセス方法</p>
     </div>
     <div class="ac_setumei">
-        <p clss="paragraph">
+       <p class="paragraph">
             練馬春日町駅からの道順はこちらになります。
         </p>
     </div>
@@ -129,7 +132,7 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            margin: 3rem ;
+            margin: 3rem;
         }
         .miti_item{
             width: 20%;
@@ -141,12 +144,17 @@
         @media screen and (max-width: 767px) {
             .mitijun{
                 flex-direction: column;
+                margin: 1rem;
             }
             .miti_item{
                 width: 55%;
             }
             .yajirushi{
                 display: none;
+            }
+            .umekomi{
+                width: 80%;
+                height: fit-content;
             }
         }
     </style>
