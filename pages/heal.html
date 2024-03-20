@@ -10,7 +10,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script type="text/javascript" src="../index.js"></script>
 </head>
-<!--大体完成-->
+<!--sp/pcともにまる
+りんたろうへ
+・文字情報があっているか確認してください（特に病名）
+・ページタイトル適当につけてしまったので確認してください
+-->
 <body>
   <header class="bar">
     <div class="menu">
@@ -89,9 +93,10 @@
         </ul>
     </div>
    <div>
-    <p class="tiryou">
+    <p class="kamo">
         それは以下のような病気かもしれません。<br />
-        てらしま整骨院ではこういった症状や病気にも対応いたします。
+        てらしま整骨院ではこのような症状や病気にも<br class="naiyo" />
+        対応いたします。
     </p>
    </div>
     <div class="kega_content">
@@ -220,7 +225,7 @@
             margin: 0;
         }
         .onayami{
-            margin: 1em;
+            margin: 1em 1em 0 1em;
             font-weight: bold;
     border-bottom: 3px #eda93b solid;
     padding: 0 3px 10px 3px;
@@ -229,7 +234,7 @@
         .heal_list{
             text-align: left;
         }
-        .tiryou{
+        .tiryou,.kamo{
             letter-spacing: 0.5px;
             line-height: 18px;
             font-size: 14px;
@@ -241,7 +246,7 @@
             padding: 1em;
         }
         .kega_content{
-            margin: 1em;
+            margin: 1em 1em 2em 1em;
         }
         /*ベース*/
 .toggle {
@@ -286,13 +291,28 @@
 .toggle:checked + .Label::before {
 	transform: rotate(-45deg) !important;
 }
+@media screen and (min-width: 767px){
+    .naiyo{
+        display: none;
+    }
+}
 @media screen and (max-width: 767px) {
     .tiryou{
-        margin: 0 0 0 2em;
+        margin: 0 0 0 1em;
     }
     .onayami{
         margin: 0 auto;
         padding: 10px 0;
+        font-size: smaller;
+    }
+    .kamo{
+        text-align: center;
+        letter-spacing: 0.5px;
+            line-height: 18px;
+            font-size: 14px;
+            color:#190F0C;
+            margin: 1em;
+            font-weight: bold;
     }
 }
        
