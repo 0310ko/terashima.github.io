@@ -33,7 +33,7 @@
             <p>てらしま整骨院</p>
             </div>
 </header>
-   <!--おすすめ-->
+   <!--おすすめpc-->
    <div class="osusume">
      <div class="osu_img_container">
         <img class="osu_img" src="./image/otete.png">
@@ -47,6 +47,14 @@
         <img class="osu_img" src="./image/gyakuotete.png">
      </div>
    </div>
+    <!--おすすめsp-->
+    <div class="osusumesp">
+        <div class="osu_circle">駐車場6台</div>
+        <div class="osu_circle">各種保険適応</div>
+        <div class="osu_circle">交通事故治療</div>
+        <div class="osu_circle">8:30から受付</div>
+        <div class="osu_circle">19:30まで受付</div>
+      </div>
    <!--挨拶-->
    <div class="aisatu">
     <p class="paragraph">突然の怪我や痛みはもちろんの事、
@@ -58,7 +66,7 @@
         <br />そのような痛みも今一度遠慮なく相談にお越しください。</p>
    </div>
    <!--アイコンボタン-->
-   <div class="osusume iconbtn">
+   <div class="icon_top iconbtn">
     
     <div class="icon_container">
         <a href="./pages/access.html">
@@ -75,13 +83,13 @@
     <div class="icon_container">
         <a href="./pages/accident.html">
         <img src="./image/tue.png">
-        <p class="paragraph">交通事故治療<br />について</p>
+        <p class="paragraph">交通事故治療<br class="nashi" />について</p>
     </a>
     </div>
     <div class="icon_container">
         <a href="./pages/heal.html">
         <img src="./image/ear.png">
-        <p class="paragraph">その他治療<br />について</p>
+        <p class="paragraph">その他治療<br class="nashi" />について</p>
     </a>
     </div>
    </div>
@@ -114,7 +122,7 @@
         <br />それは一緒に生活をする周りの家族にとってもありがたいことです。
         <br />てらしま整骨院はそんなみなさまとご家族の方々に寄り添い、応援いたします。
     </p>
-    <ul>
+    <ul class="top_ul">
         <li><span>そんなに強い痛みはないけど......</span></li>
         <li><span>何もすることもなく、外にでるきっかけがない......<br />でもこのまま体が弱っていってしまうのは不安</span></li>
         <li><span>パートナーが何もしなくて先々不安</span></li>
@@ -147,7 +155,7 @@
 </div>
  <style>
     /*おすすめ*/
-    .osusume{
+    .osusume,.osusumesp,.icon_top{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -272,7 +280,10 @@
     color:#eda93b;
    text-decoration: none;
 }
-/**/
+.top_ul{
+    margin: auto;
+}
+/*sp版まだ途中*/
 @media screen and (max-width: 1024px) {
     .osu_img_container{
         width: 70px;
@@ -285,6 +296,31 @@
       font-size: 10px;
     }
     
+  }
+  @media screen and (min-width: 767px) {
+    .osusumesp{
+        display: none;
+    } 
+  }
+  @media screen and (max-width: 767px) {
+    .aisatu{
+        width: 60%;
+    }
+    .osusume{
+        display:none;
+    }
+    .shinia{
+        padding: 3rem;
+    }
+    .icon_container p{
+        font-size: 12px;
+    }
+    .nashi{
+        display:none;
+    }
+    .osusumesp{
+        flex-wrap: wrap;
+    }
   }
  </style>
  </body>

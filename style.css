@@ -31,7 +31,6 @@ body {
 /*リスト*/
 ul{
     width: fit-content;
-    margin: auto;
     color:#190F0C;
     font-size: 14px;
   }
