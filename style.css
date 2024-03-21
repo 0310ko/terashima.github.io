@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
 html{
     height: 100%;
 }    
@@ -52,6 +52,7 @@ header{
 .logo{
     color: #ffffff;
     font-weight: bold;
+    margin-left: 1rem;
 }
 
 .bar{
@@ -232,3 +233,13 @@ header{
     font: bold 24px "Zen Kaku Gothic New", sans-serif;
     color: #ffffff;
   }
+  @media screen and (max-width: 767px){
+    .name{
+      padding-right:10px; 
+    }
+    .f_content{
+      padding-left: 10px;
+    }
+  }
+
+  

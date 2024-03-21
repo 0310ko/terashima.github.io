@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <title>てらしま整骨院</title>
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,6 +53,8 @@
         <div class="osu_circle">駐車場6台</div>
         <div class="osu_circle">各種保険適応</div>
         <div class="osu_circle">交通事故治療</div>
+    </div>
+    <div class="osusumesp">
         <div class="osu_circle">8:30から受付</div>
         <div class="osu_circle">19:30まで受付</div>
       </div>
@@ -110,7 +113,7 @@
  <!--応援します！-->
  <div class="shinia">
     <p class="underline ouen">てらしま整骨院は70歳、80歳の方々を応援します！</p>
-    <p class="paragraph ouentext">
+    <p class="ouentext">
         仕事に従事して頑張ってきて、
         <br />「これからは自分の好きなことを始めよう」
         <br />そう思っていた矢先に体の自由が......
@@ -127,7 +130,7 @@
         <li><span>何もすることもなく、外にでるきっかけがない......<br />でもこのまま体が弱っていってしまうのは不安</span></li>
         <li><span>パートナーが何もしなくて先々不安</span></li>
     </ul>
-   <p class="paragraph ouentext">
+   <p class="ouentext">
         <br />そんな方々のお悩みにも相談にも乗らせていただきます。
         <br />ご家族や介護保険に頼らなくても済む生活を
         <br />一緒に目指しましょう！
@@ -236,7 +239,7 @@
    text-decoration: none;
  }
  
-   .news p{
+.news p{
    text-align: center;
    font-weight: bold;
    font-size: 20px;
@@ -265,11 +268,18 @@
 
 .ouen{
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     margin: 0 auto;
 }
 .ouentext{
     text-align: center;
+    width:100%;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    font-size: 14px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    color:#190F0C;
 }
 .ouentext a{
     font-weight: bold;
@@ -284,7 +294,7 @@
     margin: auto;
 }
 /*sp版まだ途中*/
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .osu_img_container{
         width: 70px;
         height: 70px;
@@ -297,17 +307,36 @@
     }
     
   }
-  @media screen and (min-width: 767px){
+  @media screen and (min-width: 768px) {
     .osusumesp{
         display: none;
     } 
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
+    .news{
+        width: 280px;
+        height: 180px;
+        margin-top: 10px;
+
+    }
+    .newscontainer{
+        width: 250px;
+    }
     .aisatu{
-        width: 60%;
+        width: 80%;
     }
     .osusume{
         display:none;
+    }
+    .osusumesp,.icon_top{
+        margin: 1rem 0 1rem 0;
+    }
+    .iconbtn{
+        flex-wrap: wrap;
+    }
+    .icon_container{
+        width: 25%;
+        margin: 2rem;
     }
     .icon_container p{
         font-size: 12px;
@@ -315,9 +344,13 @@
     .nashi{
         display:none;
     }
-    .osusumesp{
-        flex-wrap: wrap;
+    .ouen{
+        font-size: 14px;
     }
+    .shinia{
+        margin: 1rem;
+    }
+   
   }
  </style>
  </body>
